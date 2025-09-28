@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: pocketbase
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: POCKETBASE_ENV
+        value: production
